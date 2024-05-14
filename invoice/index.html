@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="scripts.js" defer></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+        <h1 class="text-2xl font-bold mb-6 text-center">Love What To Wear, Invoice Calculator</h1>
+        <button onclick="createNewInvoice()" class="bg-blue-500 text-white px-4 py-2 rounded-md shadow hover:bg-blue-600">New Invoice</button>
+            <br>
+            <br>
+        <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700">Customer's Name:</label>
+            <input type="text" id="name" name="name" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm">
+        </div>
+        <div class="mb-4">
+            <label for="number" class="block text-sm font-medium text-gray-700">Undefined Price:</label>
+            <input type="number" id="number" name="number" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm">
+            <button onclick="addItem()" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md shadow hover:bg-blue-600">Add</button>
+            <button onclick="undoItem()" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md shadow hover:bg-blue-600">Undo</button>
+            <button onclick="clearName()" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md shadow hover:bg-blue-600">Clear Name</button>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <button onclick="calculateTotal()" class="bg-green-500 text-white px-4 py-2 rounded-md shadow hover:bg-green-600">Calculate</button>
+            <button onclick="generateInvoice()" class="bg-green-500 text-white px-4 py-2 rounded-md shadow hover:bg-green-600">Invoice</button>
+            <button onclick="printInvoice()" class="bg-green-500 text-white px-4 py-2 rounded-md shadow hover:bg-green-600">Print</button>
+            <button onclick="saveInvoice()" class="bg-green-500 text-white px-4 py-2 rounded-md shadow hover:bg-green-600">Save</button>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-7 gap-2 mb-6" id="predefined-buttons">
+            <!-- Predefined buttons for prices -->
+            <button onclick="addPredefinedPrice(50)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">50</button>
+            <button onclick="addPredefinedPrice(100)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">100</button>
+            <button onclick="addPredefinedPrice(150)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">150</button>
+            <button onclick="addPredefinedPrice(180)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">180</button>
+            <button onclick="addPredefinedPrice(200)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">200</button>
+            <button onclick="addPredefinedPrice(250)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">250</button>
+            <button onclick="addPredefinedPrice(280)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">280</button>
+            <button onclick="addPredefinedPrice(300)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">300</button>
+            <button onclick="addPredefinedPrice(350)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">350</button>
+            <button onclick="addPredefinedPrice(380)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">380</button>
+            <button onclick="addPredefinedPrice(400)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">400</button>
+            <button onclick="addPredefinedPrice(450)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">450</button>
+            <button onclick="addPredefinedPrice(480)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">480</button>
+            <button onclick="addPredefinedPrice(500)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md shadow hover:bg-gray-400">500</button>
+        </div>
+        <div id="newEntriesArea" class="bg-gray-200 p-4 rounded-md shadow-inner mb-4"></div>
+        <div id="outputArea" class="bg-gray-200 p-4 rounded-md shadow-inner"></div>
+        
+    </div>
+</body>
+</html>
