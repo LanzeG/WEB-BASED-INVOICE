@@ -51,6 +51,15 @@
 <body class="bg-gray-100 p-6">
     <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
         <h1 class="text-2xl font-bold mb-6 text-center">Love What To Wear</h1>
+        <div class="flex items-center justify-start gap-4 mb-2">
+            <button onclick="window.location.href = 'payment.php'" class="btn-pink1 px-4 py-2 rounded-md shadow flex items-center justify-center">
+                <i class="fas fa-money-check-alt icon-pink mr-2"></i> Payment Status
+                
+            </button>
+            <button onclick="window.location.href = 'dashboard.php'" class="btn-pink1 px-4 py-2 rounded-md shadow flex items-center justify-center">
+                <i class="fas fa-chart-line icon-pink mr-2"></i> Dashboard
+            </button>
+        </div>
         <button onclick="createNewInvoice()" class="btn-pink px-4 py-2 rounded-md shadow flex items-center justify-center mb-4">
             <i class="fas fa-plus-circle icon-pink mr-2"></i> New Invoice
         </button>
@@ -68,12 +77,9 @@
             <button onclick="clearName()" class="btn-pink1 px-4 py-2 rounded-md shadow">Clear Name</button>
         </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
             <button onclick="calculateTotal()" class="btn-pink px-4 py-2 rounded-md shadow flex items-center justify-center">
                 <i class="fas fa-calculator icon-pink mr-2"></i> Calculate
-            </button>
-            <button onclick="window.location.href = 'dashboard.php'" class="btn-pink px-4 py-2 rounded-md shadow flex items-center justify-center">
-                <i class="fas fa-chart-line icon-pink mr-2"></i> Dashboard
             </button>
             <button onclick="printInvoice()" class="btn-pink px-4 py-2 rounded-md shadow flex items-center justify-center">
                 <i class="fas fa-print icon-pink mr-2"></i> Print
